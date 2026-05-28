@@ -2,6 +2,8 @@ const express = require('express');
 const app = express();
 const port = 3000;
 
+app.use(express.static('public'));
+
 app.listen(port, () => {
     console.log('Server del mio blog');
 });
@@ -10,33 +12,38 @@ app.listen(port, () => {
 const posts = [
     {
         id: 1,
-        title: 'Primo post',
-        content: 'Questo è il contenuto del primo post',
-        tag: ['javascript', 'nodejs']
+        title: 'Ciambellone',
+        content: 'Questo il ciambellone più buono del mondo',
+        image: 'img/ciambellone.jpeg',
+        tag: ['torta', 'ciambellone']
     },
     {
         id: 2,
-        title: 'Secondo post',
-        content: 'Questo è il contenuto del secondo post',
-        tag: ['html', 'css']
+        title: 'Cracker di barbabietola',
+        content: 'Questi cracker di barbabietola sono buonissimi',
+        image: 'img/cracker_barbabietola.jpeg',
+        tag: ['snacks', 'cracker']
     },
     {
         id: 3,
-        title: 'Terzo post',
-        content: 'Questo è il contenuto del terzo post',
-        tag: ['python', 'django']
+        title: 'Pane Fritto Dolce',
+        content: 'Il pane fritto dolce è una delizia da provare',
+        image: 'img/pane_fritto_dolce.jpeg',
+        tag: ['pane', 'dolce']
     },
     {
         id: 4,
-        title: 'Quarto post',
-        content: 'Questo è il contenuto del quarto post',
-        tag: ['react', 'javascript']
+        title: 'Pasta di barbabietola',
+        content: 'La pasta di barbabietola è un piatto colorato e gustoso',
+        image: 'img/pasta_barbabietola.jpeg',
+        tag: ['pasta', 'barbabietola']
     },
     {
         id: 5,
-        title: 'Quinto post',
-        content: 'Questo è il contenuto del quinto post',
-        tag: ['vue', 'javascript']
+        title: 'Torta paesana',
+        content: 'La torta paesana è una delizia da provare',
+        image: 'img/torta_paesana.jpeg',
+        tag: ['torta', 'paesana']
     }
 
 ];
